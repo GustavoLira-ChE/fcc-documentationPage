@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Smooth scrolling */
+    scroll-behavior:smooth;
+    /* margin and padding space*/
+    --min-spacing: 8px;
+    --medium-spacing: 16px;
+    --max-spacing: 32px;
+    --padding-space: 4px;
+
+}
+body{
+    max-width: 100%;
+    /* Element colors */
+    --bg-color: #fffffe;
+    --headline: #2b2c34;
+    --pg-color: #2b2c34;
+    --button-color: #6246ea;
+    --button-text-color: #fffffe;
+    /* Ilustration colors */
+    --stroke-color: #2b2c34;
+    --main-color: #fffffe;
+    --highlight-color: #6246ea;
+    --secondary-color: #d1d1e9;
+    --tertiary-color: #e45858;
+    /* Style body */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--bg-color);
+    color: var(--pg-color);
+    width: 100vw;
+}
+h2, h3, h4{
+    color: var(--headline);
+}
+.dark-mode{
+    /* Element colors */
+    --bg-color: #16161a;
+    --headline: #fffffe;
+    --pg-color: #94a1b2;
+    --button-color: #7f5af0;
+    --button-text-color: #fffffe;
+    /* Ilustration colors */
+    --stroke-color: #010101;
+    --main-color: #fffffe;
+    --highlight-color: #7f5af0;
+    --secondary-color: #72757e;
+    --tertiary-color: #2cb67d;
+}
+/* Styling header */
+#mainHeader{
+    /* Styling header */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--headline);
+    /* Mantein the header on the page's top and f ever. */
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+#mainHeader .mainTitle{
+    margin-left: var(--max-spacing);
+}
+#mainHeader button{
+    margin-right: var(--max-spacing);
+}
+#mainHeader {
+    color: var(--bg-color);
+}
+#navbarHeader ul{
+    display: flex;
+    flex-direction: row;
+}
+#mainHeader nav ul{
+    list-style: none;
+}
+#mainHeader nav ul a{
+    text-decoration: none;
+    color: var(--bg-color);
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    padding: var(--padding-space);
+    margin-right: var(--min-spacing);
+}
+/* General style for JS and Python sections */
+#javaScript, #python{
+    display: flex;
+    flex-direction: row;
+}
+.slideHeader{
+    position: sticky;
+    top: 100px;
+    height: 100%;
+    flex: 1;
+    margin-left: var(--max-spacing);
+}
+.slideHeader nav ul{
+    list-style: none;
+}
+.slideHeader nav ul a{
+    text-decoration: none;
+    color: var(--pg-color);
+}
+.slideHeader nav ul a:hover{
+    color: var(--tertiary-color);
+}
+.main-doc{
+    flex: 3;
+}
+.main-doc section{
+    scroll-margin-top: 8rem;
+    margin-left: var(--max-spacing);
+    margin-right: var(--max-spacing);
+}
+.main-doc section article p{
+    text-align: justify;
+}
+/* Phones */
+@media (max-width: 500px){
+    #javaScript, #python{
+        flex-direction: column;
+    }
+    .slideHeader{
+        position: static;
+    }
+    .slideHeader ul{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    .slideHeader li{
+        color: var(--pg-color);
+        margin-right: var(--max-spacing);
+        margin-right: var(--max-spacing);
+    }
+}

@@ -4,9 +4,418 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title></title>
 </head>
 <body>
-    <h1></h1>
+    <header id="mainHeader">
+        <div class="mainTitle">
+            <h1>Tutorials for beginners</h1>
+            <nav id="navbarHeader">
+                <ul>
+                    <li><a href="#" onclick="return show('javaScript','python');">JavaScript</a></li>
+                    <li><a href="#" onclick="return show('python','javaScript');">Python</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button onclick="toggleFunction()">
+            Prefers Color
+        </button>
+    </header>
+    <div id="javaScript">
+        <header class="slideHeader">
+            <h2>JS Documentation</h2>
+            <nav id="navbarJS">
+                <ul>
+                    <li><a href="#what_is_JS">What is JavaScript?</a></li>
+                    <li><a href="#a_hello_world">A Hello World!</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#operators">Operators</a></li>
+                    <li><a href="#functions">Conditionals</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-doc">
+            <section id="what_is_JS" class="main-section">
+                <h3>Whats is JavaScript?</h3>
+                <article>
+                    <p>JavaScript is a powerful programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).</p>
+                    <P>JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:</P>
+                    <ul>
+                        <li>
+                            Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.
+                        </li>
+                        <li>
+                            Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.
+                        </li>
+                        <li>
+                            Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications. 
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="a_hello_world" class="main-section">
+                <h3>A Hello world!</h3>
+                <article>
+                    <p>JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.</p>
+                    <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a Hello world! example.</p>
+                    <ol>
+                        <li>Go to your test site and create a new folder named <code>scripts</code>. Within the scripts folder, create a new file called <code>main.js</code>, and save it.</li>
+                        <li>In your <code>index.html</code> file, enter this code on a new line, just before the closing <code></code>&#60/body&#62</code> tag:</li>
+                        <code class="codeExample">&#60script src="scripts/main.js"&#62&#60/script&#62</code>
+                        <li>This is doing the same job as the <code>&#60link&#62</code> element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).</li>
+                        <li>Add this code to the <code>main.js</code> file:</li>
+                        <code class="codeExample">const myHeading = document.querySelector('h1');<br>
+                        myHeading.textContent = 'Hello world!';</code>
+                        <li>Make sure the HTML and JavaScript files are saved. Then load <code>index.html</code> in your browser.</li>
+                    </ol>
+                </article>
+            </section>
+            <section id="variables" class="main-section">
+                <h3>Variables</h3>
+                <article>
+                    <p>Variables are containers that store values. You start by declaring a variable with the <code>var</code> (less recommended, dive deeper for the explanation) or the <code>let</code> keyword, followed by the name you give to the variable:</p>
+                    <code class="codeExample">let myVariable;</code>
+                    <p>After declaring a variable, you can give it a value:</p>
+                    <code class="codeExample">myVariable = 'Bob';</code>
+                    <p>Also, you can do both these operations on the same line:</p>
+                    <code class="codeExample">let myVariable = 'Bob';</code>
+                    <p>You retrieve the value by calling the variable name:</p>
+                    <code class="codeExample">myVariable;</code>
+                    <p>After assigning a value to a variable, you can change it later in the code:</p>
+                    <code class="codeExample">let myVariable = 'Bob';<br>
+                    myVariable = 'Steve';</code>
+                    <p>Note that variables may hold values that have different data types:</p>
+                    <ul>
+                        <li><strong>String: </strong>This is a sequence of text known as a string. To signify that the value is a string, enclose it in single quote marks.</li>
+                        <li><strong>Number: </strong>This is a number. Numbers don't have quotes around them.</li>
+                        <li><strong>Boolean: </strong>This is a True/False value. The words true and false are special keywords that don't need quote marks.</li>
+                        <li><strong>Array: </strong>This is a structure that allows you to store multiple values in a single reference.</li>
+                        <li><strong>Object: </strong>This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn.</li>
+                    </ul>
+                </article>
+            </section>
+            <section id="comments" class="main-section">
+                <h3>Comments</h3>
+                <article>
+                    <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:</p>
+                    <code class="codeExample">/* <br>
+                    Everything in between is a comment.
+                    <br> */</code>
+                    <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+                    <code class="codeExample">//This is a comment</code>
+                </article>
+            </section>
+            <section id="operators" class="main-section">
+                <h3>Operators</h3>
+                <article>
+                    <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+                    <table>
+                        <tr>
+                            <td><strong>Operator</strong></td>
+                            <td><strong>Explanation</strong></td>
+                            <td><strong>Symbol(s)</strong></td>
+                            <td><strong>Example</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Addition</strong></td>
+                            <td>Add two numbers together or combine two strings.</td>
+                            <td>+</td>
+                            <td><code class="codeExample">6 + 9; <br>
+                            'Hello ' + 'world!';</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subtraction, Multiplication, Division</strong></td>
+                            <td>These do what you'd expect them to do in basic math.</td>
+                            <td>-, *, /</td>
+                            <td><code class="codeExample">9 - 3; <br>
+                            8 * 2; // multiply in JS is an asterisk <br>
+                            9 / 3;</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Assignment</strong></td>
+                            <td>As you've seen already: this assigns a value to a variable.</td>
+                            <td>=</td>
+                            <td><code class="codeExample">let myVariable = 'Bob';</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Equality</strong></td>
+                            <td>This performs a test to see if two values are equal. It returns a true/false (Boolean) result.</td>
+                            <td>===</td>
+                            <td><code class="codeExample">let myVariable = 3;
+                            myVariable === 4;</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Not, Does-not-equal</strong></td>
+                            <td>This returns the logically opposite value of what it precedes. It turns a true into a false, etc.. When it is used alongside the Equality operator, the negation operator tests whether two values are not equal.</td>
+                            <td>!, !==</td>
+                            <td>For "Not", the basic expression is <code>true</code>, but the comparison returns <code>false</code> because we negate it: <br>
+                            <code class="codeExample">let myVariable = 3;
+                            !(myVariable === 3);</code><br>
+                            "Does-not-equal" gives basically the same result with different syntax. Here we are testing "is <code>myVariable</code> NOT equal to 3". This returns <code>false</code> because <code>myVariable</code> IS equal to 3: <br>
+                            <code class="codeExample">let myVariable = 3;
+                            myVariable !== 3;</code>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+            <section id="conditionals" class="main-section">
+                <h3>Conditionals</h3>
+                <article>
+                    <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the <code>if ... else</code> statement. For example:</p>
+                    <code class="codeExample">let iceCream = 'chocolate';
+                    if(iceCream === 'chocolate') {
+                        alert('Yay, I love chocolate ice cream!');
+                    } else {
+                        alert('Awwww, but chocolate is my favorite...');
+                    }</code>
+                    <p>The expression inside the if( ... ) is the test. This uses the identity operator (as described above) to compare the variable <code>iceCream</code> with the string <code>chocolate</code> to see if the two are equal. If this comparison returns <code>true</code>, the first block of code runs. If the comparison is not true, the second block of code—after the <code>else</code> statement—runs instead.</p>
+                </article>
+            </section>
+            <section id="functions" class="main-section">
+                <h3>Functions</h3>
+                <article>
+                    <p>Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:</p>
+                    <code class="codeExample">let myVariable = document.querySelector('h1');</code>
+                    <code class="codeExample">alert('hello!');</code>
+                    <p>These functions, document.querySelector and alert, are built into the browser.</p>
+                    <p>If you see something which looks like a variable name, but it's followed by parentheses— () —it is likely a function. Functions often take arguments: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.</p>
+                    <p>For example, the alert() function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
+                    <p>You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:</p>
+                    <code class="codeExample">function multiply(num1,num2) {
+                        let result = num1 * num2;
+                        return result;
+                      }</code>
+                </article>
+            </section>
+            <section id="events" class="main-section">
+                <h3>Events</h3>
+                <article>
+                    <p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
+                    <code class="codeExample">document.querySelector('html').onclick = function() {
+                        alert('Ouch! Stop poking me!');
+                    }</code>
+                    <p>There are many ways to attach an event handler to an element. Here we select the <html> element, setting its onclick handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
+                    <p>Note that</p>
+                    <code class="codeExample">document.querySelector('html').onclick = function() {};
+                    </code>
+                    <p>is equivalent to</p>
+                    <code class="codeExample">let myHTML = document.querySelector('html');
+                        myHTML.onclick = function() {};
+                    </code>
+                    <p>It's just shorter.</p>
+                </article>
+            </section>
+            <section id="reference" class="main-section">
+                <h3>Reference</h3>
+                <article>
+                    <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN</a></p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <div id="python" style="display: none;">
+        <header class="slideHeader">
+            <h2>Python Documentation</h2>
+            <nav id="navbarPython">
+                <ul>
+                    <li><a href="#why_to_learn_python">Why to Learn Python?</a></li>
+                    <li><a href="#getting_installing_python">Getting and Installing Python</a></li>
+                    <li><a href="#first_python_program">First Python Program</a></li>
+                    <li><a href="#variable_types">Variable Types</a></li>
+                    <li><a href="#basic_operators">Basic Operators</a></li>
+                    <li><a href="#decision_making">Decision Making</a></li>
+                    <li><a href="#reference1">Reference</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-doc">
+            <section id="why_to_learn_python" class="main-section">
+                <h3>Why to Learn Python?</h3>
+                <article>
+                    <p>Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.</p>
+                    <p>Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.</p>
+                    <p>Python is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:</p>
+                    <ul>
+                        <li><strong>Python is Interpreted</strong> − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.</li>
+                        <li><strong>Python is Interactive</strong> − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.</li>
+                        <li><strong>Python is Object-Oriented</strong> − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.</li>
+                        <li><strong>Python is a Beginner's Language</strong> − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.</li>
+                    </ul>
+                </article>
+            </section>
+            <section id="getting_installing_python" class="main-section">
+                <h3>Getting and Installing Python</h3>
+                <article>
+                    <h4>Getting Python</h4>
+                    <p>The most up-to-date and current source code, binaries, documentation, news, etc., is available on the official website of Python <a href="https://www.python.org/">https://www.python.org/</a></p>
+                    <h4>Installing Python</h4>
+                    <p>Python distribution is available for a wide variety of platforms. You need to download only the binary code applicable for your platform and install Python.</p>
+                    <p>If the binary code for your platform is not available, you need a C compiler to compile the source code manually. Compiling the source code offers more flexibility in terms of choice of features that you require in your installation.</p>
+                </article>
+            </section>
+            <section id="first_python_program" class="main-section">
+                <h3>First Python Program</h3>
+                <article>
+                    <p>Let us execute programs in different modes of programming.</p>
+                    <p>Invoking the interpreter without passing a script file as a parameter brings up the following prompt −</p>
+                    <code class="codeExample">
+                        $ python <br>
+                        Python 2.4.3 (#1, Nov 11 2010, 13:34:43) <br>
+                        [GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2 <br>
+                        Type "help", "copyright", "credits" or "license" for more information. <br>
+                        >>>
+                    </code>
+                </article>
+            </section>
+            <section id="variable_types" class="main-section">
+                <h3>Variable Types</h3>
+                <article>
+                    <p>Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</p>
+                    <h4>Assigning Values to Variables</h4>
+                    <p>Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to variables.</p>
+                    <h4>Standard Data Types</h4>
+                    <p>The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.</p>
+                    <p>Python has five standard data types −</p>
+                    <ul>
+                        <li><p><strong>Number: </strong>Number data types store numeric values. Number objects are created when you assign a value to them. For example −</p>
+                        <code class="codeExample">
+                            var1 = 1 <br>
+                            var2 = 10
+                        </code></li>
+                        <li><p><strong>String: </strong>Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p><p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example −</p>
+                        <code class="codeExample">
+                            #!/usr/bin/python <br>
+                            str = 'Hello World!' <br>
+                            print str          # Prints complete string <br>
+                            print str[0]       # Prints first character of the string <br>
+                            print str[2:5]     # Prints characters starting from 3rd to 5th <br>
+                            print str[2:]      # Prints string starting from 3rd character <br>
+                            print str * 2      # Prints string two times <br>
+                            print str + "TEST" # Prints concatenated string
+                        </code></li>
+                        <li><p><strong>List: </strong>Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.</p><p>The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example −</p>
+                        <code class="codeExample">
+                            #!/usr/bin/python <br>
+                            list = [ 'abcd', 786 , 2.23, 'john', 70.2 ] <br>
+                            tinylist = [123, 'john'] <br>
+                            print list          # Prints complete list <br>
+                            print list[0]       # Prints first element of the list <br>
+                            print list[1:3]     # Prints elements starting from 2nd till 3rd <br>
+                            print list[2:]      # Prints elements starting from 3rd element <br>
+                            print tinylist * 2  # Prints list two times <br>
+                            print list + tinylist # Prints concatenated lists <br>
+                        </code></li>
+                        <li><p><strong>Tuple: </strong>A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p><p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists. For example −</p>
+                        <code class="codeExample">
+                            #!/usr/bin/python <br>
+                            tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  ) <br>
+                            tinytuple = (123, 'john') <br>
+                            print tuple               # Prints the complete tuple <br>
+                            print tuple[0]            # Prints first element of the tuple <br>
+                            print tuple[1:3]          # Prints elements of the tuple starting from 2nd till 3rd <br>
+                            print tuple[2:]           # Prints elements of the tuple starting from 3rd element <br>
+                            print tinytuple * 2       # Prints the contents of the tuple twice <br>
+                            print tuple + tinytuple   # Prints concatenated tuples <br>
+                        </code></li>
+                        <li><p><strong>Dictionary: </strong>Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.</p><p>Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example −</p>
+                        <code class="codeExample">
+                            #!/usr/bin/python <br>
+                            dict = {} <br>
+                            dict['one'] = "This is one" <br>
+                            dict[2]     = "This is two" <br>
+                            tinydict = {'name': 'john','code':6734, 'dept': 'sales'} <br>
+                            print dict['one']       # Prints value for 'one' key <br>
+                            print dict[2]           # Prints value for 2 key <br>
+                            print tinydict          # Prints complete dictionary <br>
+                            print tinydict.keys()   # Prints all the keys <br>
+                            print tinydict.values() # Prints all the values <br>
+                        </code></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="basic_operators" class="main-section">
+                <h3>Basic Operators</h3>
+                <article>
+                    <p>Operators are the constructs which can manipulate the value of operands.</p>
+                    <p>Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator.</p>
+                    <h4>Types of Operator</h4>
+                    <ul>
+                        <li>Arithmetic Operators</li>
+                        <li>Comparison (Relational) Operators</li>
+                        <li>Assignment Operators</li>
+                        <li>Logical Operators</li>
+                        <li>Bitwise Operators</li>
+                        <li>Membership Operators</li>
+                        <li>Identity Operators</li>
+                    </ul>
+                    <p>To see more details watch: <a href="https://www.tutorialspoint.com/python/python_basic_operators.htm">Python - Basic Operators</a></p>
+                </article>
+            </section>
+            <section id="decision_making" class="main-section">
+                <h3>Decision Making</h3>
+                <article>
+                    <p>Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.</p>
+                    <p>Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute if outcome is TRUE or FALSE otherwise.</p>
+                    <p>Python programming language provides following types of decision making statements.</p>
+                    <table>
+                        <tr>
+                            <td><strong>Sr.No.</strong></td>
+                            <td><strong>Statement & Description</strong></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>An if statement consists of a boolean expression followed by one or more statements.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>An if statement can be followed by an optional else statement, which executes when the boolean expression is FALSE.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>You can use one if or else if statement inside another if or else if statement(s).</td>
+                        </tr>
+                    </table>
+                    <h4>Single Statement Suites</h4>
+                    <p>If the suite of an if clause consists only of a single line, it may go on the same line as the header statement.</p>
+                    <p>Here is an example of a one-line if clause −</p>
+                    <code class="codeExample">
+                        #!/usr/bin/python <br>
+                        var = 100 <br>
+                        if ( var == 100 ) : print "Value of expression is 100" <br>
+                        print "Good bye!"
+                    </code>
+                </article>
+            </section>
+            <section id="reference1" class="main-section">
+                <h3>Reference</h3>
+                <article>
+                    <p>All the documentation in this page is taken from <a href="https://www.tutorialspoint.com/python/index.htm">TutorialsPoint</a></p>
+                </article>
+            </section>
+        </main>
+
+    </div>
+    <script>
+        function toggleFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            /* alert("Page's color changes") */
+        }
+        function show(shown, hidden) {
+            document.getElementById(shown).style.display='flex';
+            document.getElementById(hidden).style.display='none';
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'auto',
+            });
+            return false;
+        }
+    </script>
 </body>
 </html>
